@@ -1,23 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './components/navegacion/navbar';
+import Inicio from './paginas/inicio';
+import Productos from './paginas/productos';
+import Items from './paginas/items';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React Desafío clase uno
-        </a>
-      </header>
+      <Router>
+        <Navbar/>
+        <Switch>
+          <Route path='/' exact component={Inicio}/>
+          <Route path='/productos' component={Productos}/>
+          <Route path='/items' component={Items}/>
+        </Switch>
+        
+      </Router>
+      
     </div>
   );
 }
