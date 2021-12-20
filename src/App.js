@@ -7,6 +7,7 @@ import Productos from './paginas/productos';
 import Items from './paginas/items';
 import CartWidget from './components/CartWidget';
 import ItemListContainer from './paginas/ItemListContainer';
+import Itemcount from './components/ItemCount';
 
 
 
@@ -24,6 +25,7 @@ function App() {
           <Route path='/productos' component={Productos}/>
           <Route path='/items' component={Items}/>
           <Route path='/ItemListContainer' component= {ItemListContainer}/>
+          <Route path='/Itemcounter' component={Itemcount}/>
         </Switch>
         
       </Router>
