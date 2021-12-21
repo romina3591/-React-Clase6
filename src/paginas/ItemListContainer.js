@@ -1,16 +1,22 @@
 import React from 'react'
 
+
+
+
 const ItemListContainer = (greeting) => {
     console.log(greeting)
-    const title= greeting.id
-    const option= greeting.option
+    const title = greeting.id
+    const option = greeting.option
 
     return (
-       <nav className='black'>
-        <div>{title}</div>
-        <div>{option}</div>
+            <div className='black'>
+                <div>{title}</div>
+                <div>{option}</div>
+            </div>
+           
 
-       </nav>
+
+
     )
 }
 
